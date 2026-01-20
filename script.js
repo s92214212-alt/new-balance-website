@@ -1,9 +1,9 @@
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
-function addToCart(name, price) {
-cart.push({ name, price });
+function addToCart(name, price, size) {
+cart.push({ name, price, size });
 localStorage.setItem("cart", JSON.stringify(cart));
-alert(name + " added to cart");
+alert(name + " (Size " + size + ") added to cart");
 }
 
 function renderCart() {
@@ -17,7 +17,7 @@ cart.forEach((item, index) => {
 total += item.price;
 cartItems.innerHTML += `
 <div>
-${item.name} - $${item.price}
+${item.name} - Size ${item.size} - $${item.price}
 <button onclick="removeItem(${index})">Remove</button>
 </div>`;
 });

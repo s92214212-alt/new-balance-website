@@ -19,19 +19,37 @@
 <section>
 <h2>Shoe Collection</h2>
 <div class="products">
-  <div class="product">
-    <img src="https://nb.scene7.com/is/image/NB/ml574evn_nb_02_i?$pdpflexf2$">
-    <h3>NB 574</h3>
-    <p>$90</p>
-    <button onclick="addToCart('NB 574', 90)">Add to Cart</button>
-  </div>
 
-  <div class="product">
-    <img src="https://nb.scene7.com/is/image/NB/m990gl5_nb_02_i?$pdpflexf2$">
-    <h3>NB 990v5</h3>
-    <p>$185</p>
-    <button onclick="addToCart('NB 990v5', 185)">Add to Cart</button>
-  </div>
+<div class="product">
+<img src="https://nb.scene7.com/is/image/NB/ml574evn_nb_02_i?$pdpflexf2$">
+<h3>NB 574</h3>
+<p>$90</p>
+<select id="size574">
+<option>38</option><option>39</option><option>40</option><option>41</option><option>42</option>
+</select>
+<button onclick="addToCart('NB 574', 90, document.getElementById('size574').value)">Add to Cart</button>
+</div>
+
+<div class="product">
+<img src="https://nb.scene7.com/is/image/NB/m990gl5_nb_02_i?$pdpflexf2$">
+<h3>NB 990v5</h3>
+<p>$185</p>
+<select id="size990">
+<option>38</option><option>39</option><option>40</option><option>41</option><option>42</option>
+</select>
+<button onclick="addToCart('NB 990v5', 185, document.getElementById('size990').value)">Add to Cart</button>
+</div>
+
+<div class="product">
+<img src="https://nb.scene7.com/is/image/NB/ms327lb1_nb_02_i?$pdpflexf2$">
+<h3>NB 327</h3>
+<p>$100</p>
+<select id="size327">
+<option>38</option><option>39</option><option>40</option><option>41</option><option>42</option>
+</select>
+<button onclick="addToCart('NB 327', 100, document.getElementById('size327').value)">Add to Cart</button>
+</div>
+
 </div>
 </section>
 
