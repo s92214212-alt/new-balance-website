@@ -2,10 +2,10 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>New Balance | Home</title>
+<title>New Balance | Cart</title>
 <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body onload="renderCart()">
 <header>
   <h1>New Balance</h1>
   <nav>
@@ -17,10 +17,11 @@
 </header>
 
 <section>
-  <h2>Performance Meets Style</h2>
-  <p>Explore New Balance footwear and apparel designed for comfort, durability, and performance.</p>
+<h2>Your Cart</h2>
+<div id="cartItems"></div>
+<p>Total: $<span id="total">0</span></p>
 </section>
 
-<footer>© 2026 New Balance — Student Project</footer>
+<script src="script.js"></script>
 </body>
 </html>
