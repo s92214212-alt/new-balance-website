@@ -1,38 +1,59 @@
 body {
 margin: 0;
-font-family: Helvetica, Arial, sans-serif;
+font-family: 'Montserrat', sans-serif;
+color: white;
+}
+
+.home {
+background: url('https://media.giphy.com/media/l0MYt5jPR6QX5pnqM/giphy.gif') no-repeat center center fixed;
+background-size: cover;
+height: 100vh;
 }
 
 header {
 padding: 25px;
-border-bottom: 1px solid #ddd;
 display: flex;
 justify-content: space-between;
 align-items: center;
+background: rgba(0,0,0,0.6);
 }
 
-header h1 { color: #c8102e; }
+header h1 {
+color: #c8102e;
+font-weight: 800;
+}
 
 nav a {
 margin-left: 20px;
 text-decoration: none;
-color: #111;
+color: white;
 font-weight: 600;
 }
 
-.hero {
+.hero-overlay {
+height: calc(100vh - 100px);
 display: flex;
+flex-direction: column;
+justify-content: center;
 align-items: center;
-gap: 40px;
-padding: 60px 8%;
+text-align: center;
+background: rgba(0,0,0,0.4);
 }
 
-.hero img {
-width: 350px;
-border-radius: 12px;
+.hero-overlay h2 {
+font-size: 56px;
+margin: 0;
 }
 
-section { padding: 50px 8%; }
+.hero-overlay p {
+font-size: 22px;
+max-width: 600px;
+}
+
+section {
+padding: 50px 8%;
+color: black;
+}
 
 .products {
 display: grid;
@@ -43,6 +64,7 @@ gap: 30px;
 .product {
 border: 1px solid #eee;
 padding: 20px;
+background: white;
 }
 
 .product img {
@@ -51,24 +73,15 @@ height: 180px;
 object-fit: contain;
 }
 
-select {
+select, button {
 width: 100%;
-padding: 8px;
-margin: 10px 0;
+padding: 10px;
+margin-top: 10px;
 }
 
 button {
-width: 100%;
-padding: 10px;
 background: #c8102e;
 border: none;
 color: white;
 cursor: pointer;
-}
-
-footer {
-text-align: center;
-padding: 30px;
-border-top: 1px solid #ddd;
-margin-top: 50px;
 }

@@ -1,9 +1,9 @@
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
-function addToCart(name, price, size) {
-cart.push({ name, price, size });
+function addToCart(name, price, option) {
+cart.push({ name, price, option });
 localStorage.setItem("cart", JSON.stringify(cart));
-alert(name + " (Size " + size + ") added to cart");
+alert(name + " (" + option + ") added to cart");
 }
 
 function renderCart() {
@@ -13,20 +13,20 @@ if (!cartItems) return;
 cartItems.innerHTML = "";
 let total = 0;
 
-cart.forEach((item, index) => {
+cart.forEach((item, i) => {
 total += item.price;
 cartItems.innerHTML += `
 <div>
-${item.name} - Size ${item.size} - $${item.price}
-<button onclick="removeItem(${index})">Remove</button>
+${item.name} - ${item.option} - $${item.price}
+<button onclick="removeItem(${i})">Remove</button>
 </div>`;
 });
 
 document.getElementById("total").textContent = total;
 }
 
-function removeItem(index) {
-cart.splice(index, 1);
+function removeItem(i) {
+cart.splice(i, 1);
 localStorage.setItem("cart", JSON.stringify(cart));
 renderCart();
 }

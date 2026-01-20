@@ -7,32 +7,85 @@
 </head>
 <body>
 <header>
-  <h1>New Balance</h1>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="shoes.html">Shoes</a>
-    <a href="clothes.html">Clothing</a>
-    <a href="cart.html">Cart</a>
-  </nav>
+<h1>New Balance</h1>
+<nav>
+<a href="index.html">Home</a>
+<a href="shoes.html">Shoes</a>
+<a href="clothes.html">Clothing</a>
+<a href="cart.html">Cart</a>
+</nav>
 </header>
 
 <section>
-<h2>Clothing</h2>
+<h2>Clothing Collection</h2>
 <div class="products">
+
 
 <div class="product">
 <img src="https://nb.scene7.com/is/image/NB/mt21542bk_nb_70_i?$pdpflexf2$">
 <h3>NB Hoodie</h3>
 <p>$75</p>
-<button onclick="addToCart('NB Hoodie', 75, 'M')">Add to Cart</button>
+<select>
+<option>Black</option><option>White</option><option>Grey</option><option>Red</option>
+</select>
+<button onclick="addToCart('NB Hoodie', 75, this.previousElementSibling.value)">Add to Cart</button>
 </div>
 
+
 <div class="product">
-<img src="https://nb.scene7.com/is/image/NB/mt03909bk_nb_70_i?$pdpflexf2$">
+<img src="https://nb.scene7.com/is/image/NB/mt21542bk_nb_70_i?$pdpflexf2$">
 <h3>NB T-Shirt</h3>
 <p>$35</p>
-<button onclick="addToCart('NB T-Shirt', 35, 'M')">Add to Cart</button>
+<select>
+<option>Black</option><option>White</option><option>Grey</option><option>Red</option>
+</select>
+<button onclick="addToCart('NB T-Shirt', 35, this.previousElementSibling.value)">Add to Cart</button>
 </div>
+
+
+<div class="product">
+<img src="https://nb.scene7.com/is/image/NB/mt21542bk_nb_70_i?$pdpflexf2$">
+<h3>NB Track Pants</h3>
+<p>$65</p>
+<select>
+<option>Black</option><option>White</option><option>Grey</option><option>Red</option>
+</select>
+<button onclick="addToCart('NB Track Pants', 65, this.previousElementSibling.value)">Add to Cart</button>
+</div>
+
+
+<div class="product">
+<img src="https://nb.scene7.com/is/image/NB/mt21542bk_nb_70_i?$pdpflexf2$">
+<h3>NB Shorts</h3>
+<p>$45</p>
+<select>
+<option>Black</option><option>White</option><option>Grey</option><option>Red</option>
+</select>
+<button onclick="addToCart('NB Shorts', 45, this.previousElementSibling.value)">Add to Cart</button>
+</div>
+
+
+<div class="product">
+<img src="https://nb.scene7.com/is/image/NB/mt21542bk_nb_70_i?$pdpflexf2$">
+<h3>NB Zip Jacket</h3>
+<p>$95</p>
+<select>
+<option>Black</option><option>White</option><option>Grey</option><option>Red</option>
+</select>
+<button onclick="addToCart('NB Zip Jacket', 95, this.previousElementSibling.value)">Add to Cart</button>
+</div>
+
+
+<div class="product">
+<img src="https://nb.scene7.com/is/image/NB/mt21542bk_nb_70_i?$pdpflexf2$">
+<h3>NB Sweatpants</h3>
+<p>$70</p>
+<select>
+<option>Black</option><option>White</option><option>Grey</option><option>Red</option>
+</select>
+<button onclick="addToCart('NB Sweatpants', 70, this.previousElementSibling.value)">Add to Cart</button>
+</div>
+
 
 </div>
 </section>
