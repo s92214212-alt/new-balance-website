@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>New Balance | Official Store</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #c8102e;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav {
+            background: #222;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        section {
+            padding: 40px;
+        }
+
+        h2 {
+            color: #c8102e;
+        }
+
+        .products {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .product {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        .product img {
+            width: 100%;
+            max-height: 150px;
+            object-fit: contain;
+        }
+
+        button {
+            background-color: #c8102e;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background-color: #a50d25;
+        }
+
+        .cart {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            max-width: 400px;
+        }
+
+        footer {
+            background: #222;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>New Balance</h1>
+    <p>Fearlessly Independent Since 1906</p>
+</header>
+
+<nav>
+    <a href="#about">About</a>
+    <a href="#products">Shoes</a>
+    <a href="#locations">Locations</a>
+    <a href="#cart">Cart (<span id="cartCount">0</span>)</a>
+</nav>
+
+<section id="about">
+    <h2>About New Balance</h2>
+    <p>
+        New Balance is a global athletic footwear and apparel company founded in 1906.
+        Known for innovation, comfort, and performance-driven design.
+    </p>
+</section>
+
+<section id="products">
+    <h2>Shoe Collection</h2>
+    <div class="products">
+
+        <div class="product">
+            <img src="https://nb.scene7.com/is/image/NB/ml574evn_nb_02_i?$pdpflexf2$" alt="NB 574">
+            <h3>NB 574</h3>
+            <p>$90</p>
+            <button onclick="addToCart('NB 574')">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="https://nb.scene7.com/is/image/NB/m990gl5_nb_02_i?$pdpflexf2$" alt="NB 990v5">
+            <h3>NB 990v5</h3>
+            <p>$185</p>
+            <button onclick="addToCart('NB 990v5')">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="https://nb.scene7.com/is/image/NB/ms327lb1_nb_02_i?$pdpflexf2$" alt="NB 327">
+            <h3>NB 327</h3>
+            <p>$100</p>
+            <button onclick="addToCart('NB 327')">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="https://nb.scene7.com/is/image/NB/m1080b12_nb_02_i?$pdpflexf2$" alt="Fresh Foam">
+            <h3>Fresh Foam X</h3>
+            <p>$130</p>
+            <button onclick="addToCart('Fresh Foam X')">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="https://nb.scene7.com/is/image/NB/bb550wt1_nb_02_i?$pdpflexf2$" alt="NB 550">
+            <h3>NB 550</h3>
+            <p>$110</p>
+            <button onclick="addToCart('NB 550')">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="https://nb.scene7.com/is/image/NB/m2002rst_nb_02_i?$pdpflexf2$" alt="NB 2002R">
+            <h3>NB 2002R</h3>
+            <p>$145</p>
+            <button onclick="addToCart('NB 2002R')">Add to Cart</button>
+        </div>
+
+    </div>
+</section>
+
+<section id="locations">
+    <h2>Store Locations</h2>
+    <ul>
+        <li>New York, USA</li>
+        <li>Boston, USA</li>
+        <li>London, UK</li>
+        <li>Tokyo, Japan</li>
+    </ul>
+</section>
+
+<section id="cart">
+    <h2>Your Cart</h2>
+    <div class="cart">
+        <ul id="cartItems"></ul>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 New Balance. Student Project.</p>
+</footer>
+
+<script>
+    let cartCount = 0;
+    const cartItems = document.getElementById("cartItems");
+    const cartCounter = document.getElementById("cartCount");
+
+    function addToCart(product) {
+        cartCount++;
+        cartCounter.textContent = cartCount;
+
+        const li = document.createElement("li");
+        li.textContent = product;
+        cartItems.appendChild(li);
+    }
+</script>
+
+</body>
+</html>
